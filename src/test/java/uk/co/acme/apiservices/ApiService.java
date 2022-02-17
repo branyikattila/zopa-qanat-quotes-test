@@ -26,9 +26,4 @@ public class ApiService {
                 .when().post(url+"/quote").thenReturn();
     }
 
-    //TODO need to check valid quote one. it was working fine ...
-    //TODO clean up
-
-
-
 }
