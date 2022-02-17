@@ -1,7 +1,0 @@
-[
-  {
-    "id" : "1",
-    "name" : "createUser",
-    "payload" :"{\"firstName\": \"Tony\",\"lastName\": \"Tester\",\"address\": {\"firstLine\": \"47-49 Cottons Centre\",\"town\": \"London\",\"postCode\": \"SE1 2QG\"},\"emailAddress\": \"tony.tester@zopa.com\",\"jobTitle\": \"Tester/Breaker\"}"
-  }
-]
