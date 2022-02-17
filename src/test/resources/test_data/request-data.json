@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "createUser",
+    "payload" :"{\"firstName\": \"Tony\",\"lastName\": \"Tester\",\"address\": {\"firstLine\": \"47-49 Cottons Centre\",\"town\": \"London\",\"postCode\": \"SE1 2QG\"},\"emailAddress\": \"tony.tester@zopa.com\",\"jobTitle\": \"Tester/Breaker\"}",
+    "memberId" : null,
+    "expectedResponseCode": "201",
+    "expectedResponseMsg": null,
+    "expectedFailMsg" : null
+  },
+  {
+    "id": "2",
+    "name": "nonExisting",
+    "payload" : "",
+    "memberId" : "d6ebd894-5343-aaaa-aaaa-4b897e5da409",
+    "expectedResponseCode": "404",
+    "expectedResponseMsg": null ,
+    "expectedFailMsg" : "{\"message\": \"No Member exists for memberId=d6ebd894-5343-aaaa-aaaa-4b897e5da409\"}"
+  },
+  {
+    "id": "3",
+    "name": "validQuote",
+    "payload" : "{\"currentSalary\": 30000,\"amountToBorrow\": 15000,\"termLength\": 24}",
+    "memberId" : null,
+    "expectedResponseCode": "200",
+    "expectedResponseMsg": {"quoteId": "", "quoteOffered": true, "amountToBorrow": 15000, "termLength": 24, "interestRate": 7.5, "memberId": "", "membersFullName": null},
+    "expectedFailMsg" : null
+  },
+  {
+    "id": "4",
+    "name": "invalidQuote",
+    "payload" : "{\"currentSalary\": 50000,\"amountToBorrow\": 150000,\"termLength\": 24}",
+    "memberId" : null,
+    "expectedResponseCode": "400",
+    "expectedResponseMsg": null,
+    "expectedFailMsg" : "{\"message\": \"150000 is outside the lending range: 1000 <= TOTAL <= 25000\"}"
+  }
+]
