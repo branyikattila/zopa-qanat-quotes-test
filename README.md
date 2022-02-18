@@ -5,8 +5,9 @@ Prerequisites:
 Maven 3.5+
 
 Steps to execute the tests:
+
 1, clone the repository
-2, execute the following cmd from the root directory: man clean install -Dcucumber.options="--tags @complete"
+2, execute the following cmd from the root directory: mvn clean install -Dcucumber.options="--tags @complete"
 
 
 The project will run 3 test scenarios:
